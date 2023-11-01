@@ -21,6 +21,7 @@ def database_select_gravity():
     cur.execute(sql_select)
     select_gravity = cur.fetchall()
     gravity_count = cur.rowcount
+    print("Gravity Station count: ",gravity_count)
     cur.close()
     conn.close()
 
