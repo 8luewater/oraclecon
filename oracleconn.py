@@ -2,7 +2,6 @@ import oracledb
 import os
 import logging
 from dotenv import load_dotenv
-from payload import payload_type
 
 load_dotenv()
 
@@ -27,6 +26,7 @@ def database_conn():
 
 
 def main():
+    print("Hello GA")
     database_conn()
 
 if __name__ == "__main__":
