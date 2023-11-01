@@ -16,7 +16,7 @@ db_password = os.environ["db_password"]
 
 
 def database_select_gravity():
-    sql_select = sql_strong.sql_select
+    sql_select = sql_string.sql_select
     conn, cur = database_conn()
     cur.execute(sql_select)
     select_gravity = cur.fetchall()
