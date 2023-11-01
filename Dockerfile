@@ -23,6 +23,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
-COPY oracleconn.py . 
+# Copy function code
+COPY oracleconn.py .
+COPY sql_string.py .
 
 ENTRYPOINT [ "python", "oracleconn.py" ]
