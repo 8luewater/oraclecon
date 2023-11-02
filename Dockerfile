@@ -24,7 +24,7 @@ COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
 # Copy function code
-COPY oracleconn.py .
+COPY oraconn.py .
 COPY sql_string.py .
 
-ENTRYPOINT [ "python", "oracleconn.py" ]
+ENTRYPOINT [ "python", "oraconn.py" ]
