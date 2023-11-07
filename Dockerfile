@@ -17,7 +17,7 @@ RUN cd /opt/oracle/instantclient* \
   && ldconfig
 
 # Set the working directory to /app
-WORKDIR /app
+#WORKDIR /app
 
 # Copy the rest of your app's source code from your host to your image filesystem.
 COPY requirements.txt .
