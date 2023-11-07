@@ -39,7 +39,7 @@ def database_conn():
 
 
 def main():
-    print("Hello GA")
+    print(f"Hi GA: User {db_user} | Conn {db_conn_string} | Pwd {db_password}")
     #database_conn()
     database_select_gravity()
 
