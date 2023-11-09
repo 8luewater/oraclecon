@@ -15,13 +15,13 @@ db_user = os.environ["db_user"]
 db_password = os.environ["db_password"]
 
 
-def database_select_gravity():
+def database_select_table():
     sql_select = sql_string.sql_select
     conn, cur = database_conn()
     cur.execute(sql_select)
-    select_gravity = cur.fetchall()
-    gravity_count = cur.rowcount
-    print("Gravity Station count: ",gravity_count)
+    #select_table = cur.fetchall()
+    table_count = cur.rowcount
+    print("Table count: ",table_count)
     cur.close()
     conn.close()
 
@@ -31,7 +31,7 @@ def database_conn():
     try:
         conn = oracledb.connect(user=db_user, password=db_password, dsn=db_conn_string)
         cur = conn.cursor()
-        print(f"Successfully connected to OCI")
+        print(f"Successfully connected to ORARDS")
     except oracledb.Error as e:
         print(f"database error: {e}")
 
@@ -41,7 +41,7 @@ def database_conn():
 def main():
     print(f"Hi GA: User {db_user} | Conn {db_conn_string} | Pwd {db_password}")
     #database_conn()
-    database_select_gravity()
+    database_select_table()
 
 if __name__ == "__main__":
     main()
