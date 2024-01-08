@@ -19,7 +19,7 @@ def database_select_table():
     sql_select = sql_string.sql_select
     conn, cur = database_conn()
     cur.execute(sql_select)
-    #select_table = cur.fetchall()
+    select_table = cur.fetchall()
     table_count = cur.rowcount
     print("Table count: ",table_count)
     cur.close()
@@ -40,8 +40,8 @@ def database_conn():
 
 def main():
     print(f"Hi GA: User {db_user} | Conn {db_conn_string} | Pwd {db_password}")
-    database_conn()
-    #database_select_table()
+    #database_conn()
+    database_select_table()
 
 if __name__ == "__main__":
     main()
