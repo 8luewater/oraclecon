@@ -1,1 +1,1 @@
-sql_select = "select * from BOREHOLE_GA_CONSTRUCTION_LOGS"
+sql_select = "select * from PUB_DATA.PIDUSER_GRAVITY_STATION"
